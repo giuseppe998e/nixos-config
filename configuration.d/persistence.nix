@@ -24,14 +24,6 @@
             options = [ "bind" ];
         };
 
-        # Bind "/var/cache" directory
-        # mkdir -p var/cache
-        #"/var/cache" = {
-        #    device = "/nix/persist/var/cache";
-        #    fsType = "none";
-        #    options = [ "bind" ];
-        #};
-
         # Bind "/var/lib" directory
         # mkdir -p var/lib
         "/var/lib" = {
@@ -39,6 +31,14 @@
             fsType = "none";
             options = [ "bind" ];
         };
+
+        # Bind "/var/cache" directory
+        # mkdir -p var/cache
+        #"/var/cache" = {
+        #    device = "/nix/persist/var/cache";
+        #    fsType = "none";
+        #    options = [ "bind" ];
+        #};
     };
 
     environment.etc = {
