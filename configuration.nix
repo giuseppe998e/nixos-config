@@ -14,7 +14,7 @@ let
 in
 {
     # Sub-Configurations
-    imports = listConfigs ./configuration.d;
+    imports = listConfig ./configuration.d;
 
     # TimeZone
     time.timeZone = "Europe/Rome";
