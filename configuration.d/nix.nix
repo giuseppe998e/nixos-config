@@ -11,11 +11,11 @@
         # Garbage collector
         gc = {
             automatic = true;
-            dates     = "weekly";
-            options   = "--delete-older-than 7d";
+            dates = "weekly";
+            options = "--delete-older-than 7d";
         };
         extraOptions = ''
-            keep-outputs     = true
+            keep-outputs = true
             keep-derivations = true
         '';
     };
