@@ -7,7 +7,7 @@ with lib;
 let
     # Returns all ".nix" files in a directory
     listConfig = dir: map (name: dir + "/${name}")
-        (attrValues (filterAttrs
+        (attrNames (filterAttrs
             (name: _: hasSuffix ".nix" name)
             (readDir dir)
         ));
