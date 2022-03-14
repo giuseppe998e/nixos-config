@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
     boot = {
         # Kernel version

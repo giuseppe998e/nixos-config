@@ -1,7 +1,7 @@
 {
     networking = {
         # Computer's hostname
-        hostname = "nixos";
+        hostName = "nixos";
 
         # Enable WiFi support (wpa_supplicant)
         wireless.enable = true;
