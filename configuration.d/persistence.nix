@@ -32,10 +32,10 @@
         #    options = [ "bind" ];
         #};
 
-        # Bind "/var/lib/bluetooth" directory
-        # mkdir -p var/lib/bluetooth
-        "/var/lib/bluetooth" = {
-            device = "/nix/persist/var/lib/bluetooth";
+        # Bind "/var/lib" directory
+        # mkdir -p var/lib
+        "/var/lib" = {
+            device = "/nix/persist/var/lib";
             fsType = "none";
             options = [ "bind" ];
         };
