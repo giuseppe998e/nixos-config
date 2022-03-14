@@ -2,7 +2,7 @@
 
 {
     nix = {
-        # Nix's enabled users
+        # Trusted users
         trustedUsers = [ "@wheel" ];
 
         # Auto optimize store
