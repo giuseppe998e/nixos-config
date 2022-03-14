@@ -1,5 +1,3 @@
-{ config, ... }:
-
 {
     fileSystems = {
         # Root path

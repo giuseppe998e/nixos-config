@@ -1,5 +1,3 @@
-{ config, ... }:
-
 {
     networking = {
         # Computer's hostname
