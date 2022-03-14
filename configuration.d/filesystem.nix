@@ -27,6 +27,13 @@
             fsType = "btrfs";
             options = [ "noatime" "compress=zstd" "subvol=@home" ];
         };
+
+        # Bind "/etc/nixos" directory
+        "/etc/nixos" = {
+            device = "/nix/persist/etc/nixos";
+            fsType = "none";
+            options = [ "bind" ];
+        };
     };
 
     swapDevices = [ ];
