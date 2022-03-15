@@ -7,7 +7,6 @@ let
 in
 {
     services = {
-        # Gnome Desktop
         xserver = {
             enable = true;
 
@@ -21,7 +20,6 @@ in
             desktopManager.gnome.enable = true;
         };
 
-        # Disable some GNOME services
         gnome = {
             chrome-gnome-shell.enable = true;
             core-utilities.enable = false;
@@ -30,17 +28,17 @@ in
         };
     };
 
-    # Exclude some packages in Gnome
+    # Exclude some packages
     environment.gnome.excludePackages = with pkgs; [
         gnome-online-accounts
     ];
 
+    # Include some packages
     programs = {
         evince.enable = true;
         file-roller.enable = true;
     };
 
-    # Install recommended packages
     environment.systemPackages = with pkgs.gnome; [
         # Gnome's
         eog
