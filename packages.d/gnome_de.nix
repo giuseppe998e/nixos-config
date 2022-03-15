@@ -1,5 +1,10 @@
 { pkgs, ... }:
 
+let
+    font-awesome = pkgs.nerdfonts.override {
+        fonts = [ "Hack" ];
+    };
+in
 {
     services = {
         # Gnome Desktop
@@ -72,9 +77,7 @@
 
     fonts.fonts = with pkgs; [
         noto-fonts-emoji
-        nerdfonts.override {
-            fonts = [ "Hack" ];
-        }
+        font-awesome
     ];
 
     nixpkgs.config.firefox.enableGnomeExtensions = true;
