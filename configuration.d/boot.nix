@@ -22,8 +22,10 @@
         # Initial ramdisk
         initrd = {
             # The set of kernel modules in the initial ramdisk used during the boot process.
-            # This set must include all modules necessary for mounting the root device
             availableKernelModules = [ ];
+
+            # Names of supported filesystem types in the initial ramdisk.
+            supportedFilesystems = [ "btrfs" "tmpfs" ];
 
             # Modules that are always loaded by the initrd
             #kernelModules = [ ];
