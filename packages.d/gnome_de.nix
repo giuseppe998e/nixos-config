@@ -13,11 +13,11 @@
             };
 
             # Gnome Desktop Environment
-            desktopManager.gnome3.enable = true;
+            desktopManager.gnome.enable = true;
         };
 
         # Disable some GNOME services
-        gnome3 = {
+        gnome = {
             chrome-gnome-shell.enable = true;
             games.enable = false;
             gnome-initial-setup.enable = false;
@@ -34,7 +34,7 @@
     };
 
     # Exclude some packages in Gnome
-    environment.gnome3.excludePackages = [
+    environment.gnome.excludePackages = [
         pkgs.epiphany
         pkgs.gnome-connections
         pkgs.gnome-online-accounts
