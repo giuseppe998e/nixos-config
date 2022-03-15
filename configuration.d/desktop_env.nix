@@ -36,22 +36,22 @@
     # Exclude some packages in Gnome
     environment.gnome.excludePackages = [
         pkgs.epiphany
-        pkgs.gnome-calculator
         pkgs.gnome-connections
-        pkgs.gnome-contacts
-        pkgs.gnome-logs
-        pkgs.gnome-maps
         pkgs.gnome-online-accounts
         pkgs.gnome-passwordsafe
         pkgs.gnome-photos
-        pkgs.gnome-screenshot
         pkgs.gnome-tour
-        pkgs.gnome-weather
         pkgs.gnome.atomix
         pkgs.gnome.cheese
         pkgs.gnome.geary
+        pkgs.gnome.gnome-calculator
         pkgs.gnome.gnome-characters
+        pkgs.gnome.gnome-contacts
+        pkgs.gnome.gnome-logs
+        pkgs.gnome.gnome-maps
         pkgs.gnome.gnome-music
+        pkgs.gnome.gnome-screenshot
+        pkgs.gnome.gnome-weather
         pkgs.gnome.hitori
         pkgs.gnome.iagno
         pkgs.gnome.tali
