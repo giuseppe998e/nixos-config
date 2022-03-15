@@ -10,8 +10,8 @@
     programs = {
         zsh = {
             enable = true;
-            enableAutosuggestions = true;
-            enableSyntaxHighlighting = true;
+            sutosuggestions.enable = true;
+            syntaxHighlighting.enable = true;
         };
 
         starship = {
