@@ -27,15 +27,28 @@ in
             core-utilities.enable = false;
             core-developer-tools.enable = false;
             games.enable = false;
+        };
+    };
+
+    programs = {
+        evince.enable = true;
+        file-roller.enable = true;
     };
 
     # Install recommended packages
-    environment.systemPackages = with pkgs; [
-        alacritty
-        firefox #Cause "firefox-devedition-bin(-unwrapped)" not works with "chrome-gnome-shell"
-        gnome.gnome-boxes
-        gnome.gnome-tweaks
-        mpv
+    environment.systemPackages = with pkgs.gnome; [
+        # Gnome's
+        eog
+        gedit
+        gnome-boxes
+        gnome-system-monitor
+        gnome-tweaks
+        nautilus
+
+        # Others
+        pkgs.alacritty
+        pkgs.firefox # Cause "firefox-devedition-bin(-unwrapped)" not works with "chrome-gnome-shell"
+        pkgs.mpv
     ];
 
     # Install recommended fonts
