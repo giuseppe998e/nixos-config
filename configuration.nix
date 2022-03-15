@@ -14,7 +14,8 @@ let
 in
 {
     # Sub-Configurations
-    imports = listConfig ./configuration.d;
+    imports = (listConfig ./configuration.d)
+            ++ (listConfig ./packages.d);
 
     # TimeZone
     time.timeZone = "Europe/Rome";
@@ -22,9 +23,6 @@ in
     # Internationalization properties
     i18n.defaultLocale = "en_US.UTF-8";
     console.keyMap = "it";
-
-    # Recommended for PipeWire (hardware.nix)
-    security.rtkit.enable = true;
 
     # This value determines the NixOS release from which the default
     # settings for stateful data, like file locations and database versions

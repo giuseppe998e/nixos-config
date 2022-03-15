@@ -64,6 +64,7 @@
 
     environment.systemPackages = with pkgs; [
         alacritty
+        gnome.gnome-tweaks
         firefox-devedition-bin
     ];
 }
