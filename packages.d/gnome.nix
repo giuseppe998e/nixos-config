@@ -31,6 +31,7 @@ in
     # Exclude some packages
     environment.gnome.excludePackages = with pkgs; [
         gnome-online-accounts
+        gnome.gnome-shell-extensions
     ];
 
     # Include some packages
