@@ -72,7 +72,7 @@ in
     # Install recommended packages
     environment.systemPackages = with pkgs; [
         alacritty
-        firefox-devedition-bin
+        firefox #Cause "firefox-devedition-bin(-unwrapped)" not works
         gnome.gnome-tweaks
         mpv
     ];
@@ -84,7 +84,7 @@ in
     ];
 
     # Firefox configurations
-    nixpkgs.config.firefox-devedition-bin = {
+    nixpkgs.config.firefox = {
         enableGnomeExtensions = true;
         pipewireSupport = true;
     };
