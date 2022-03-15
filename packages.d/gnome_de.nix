@@ -69,16 +69,23 @@ in
         simple-scan
     ];
 
+    # Install recommended packages
     environment.systemPackages = with pkgs; [
         alacritty
+        firefox-devedition-bin
         gnome.gnome-tweaks
-        firefox #Cause "firefox-devedition-bin(-unwrapped)" not works
+        mpv
     ];
 
+    # Install recommended fonts
     fonts.fonts = with pkgs; [
-        noto-fonts-emoji
         font-awesome
+        noto-fonts-emoji
     ];
 
-    nixpkgs.config.firefox.enableGnomeExtensions = true;
+    # Firefox configurations
+    nixpkgs.config.firefox-devedition-bin = {
+        enableGnomeExtensions = true;
+        pipewireSupport = true;
+    };
 }
