@@ -1,5 +1,8 @@
+{ pkgs, ... }:
+
 {
     users = {
+        defaultUserShell = pkgs.zsh;
         mutableUsers = false;
         users = {
             giuseppe = {
