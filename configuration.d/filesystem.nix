@@ -12,6 +12,7 @@
             device = "/dev/disk/by-uuid/*TBD*";
             fsType = "vfat";
             options = [ "defaults" "noatime" ];
+            depends = [ "/" ];
         };
 
         # Nix path
@@ -19,6 +20,7 @@
             device = "/dev/disk/by-uuid/*TBD*";
             fsType = "btrfs";
             options = [ "noatime" "compress=zstd" "subvol=@nix" ];
+            depends = [ "/" ];
         };
 
         # Home path
@@ -26,6 +28,7 @@
             device = "/dev/disk/by-uuid/*TBD*";
             fsType = "btrfs";
             options = [ "noatime" "compress=zstd" "subvol=@home" ];
+            depends = [ "/" ];
         };
     };
 
