@@ -27,6 +27,16 @@
         };
 
         # Gnome games
-        gnome.games.enable = false;
+        gnome = {
+            games.enable = false;
+            rygel.enable = false;
+            tracker.enable = false;
+            tracker-miners.enable = false;
+            gnome-initial-setup.enable = false;
+            gnome-documents.enable = false;
+            gnome-online-miners.enable = false;
+            gnome-remote-desktop.enable = false;
+            chrome-gnome-shell.enable = true;
+        };
     };
 }
