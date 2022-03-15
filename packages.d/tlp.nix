@@ -4,8 +4,10 @@
             enable = true;
             settings = {
                 # Battery care
+                START_CHARGE_THRESH_BAT0 = 65;
                 START_CHARGE_THRESH_BAT1 = 65;
-                STOP_CHARGE_THRESH_BAT1  = 81;
+                STOP_CHARGE_THRESH_BAT0 = 81;
+                STOP_CHARGE_THRESH_BAT1 = 81;
 
                 # CPU Governor (AC)
                 CPU_SCALING_GOVERNOR_ON_AC = "performance";
