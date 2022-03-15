@@ -10,7 +10,7 @@
     programs = {
         zsh = {
             enable = true;
-            sutosuggestions.enable = true;
+            autosuggestions.enable = true;
             syntaxHighlighting.enable = true;
         };
 
