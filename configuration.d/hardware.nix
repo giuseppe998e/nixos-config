@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
     hardware = {
-        cpu.intel.updateMicrocode = true;
+        cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
         video.hidpi.enable = true;
         pulseaudio.enable = false; # Required for PipeWire (hardware.nix)
         opengl = {
