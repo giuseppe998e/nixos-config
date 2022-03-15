@@ -55,6 +55,7 @@
         pkgs.gnome.gnome-weather
         pkgs.gnome.hitori
         pkgs.gnome.iagno
+        pkgs.gnome.seahorse
         pkgs.gnome.tali
         pkgs.gnome.totem
         pkgs.gnome.yelp
