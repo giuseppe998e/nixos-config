@@ -33,6 +33,7 @@
         #    device = "/nix/persist/var/cache";
         #    fsType = "none";
         #    options = [ "bind" ];
+        #    depends = [ "/nix/persist" ];
         #};
     };
 
