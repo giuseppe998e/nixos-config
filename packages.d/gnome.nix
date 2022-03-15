@@ -30,6 +30,11 @@ in
         };
     };
 
+    # Exclude some packages in Gnome
+    environment.gnome.excludePackages = with pkgs; [
+        gnome-online-accounts
+    ];
+
     programs = {
         evince.enable = true;
         file-roller.enable = true;
