@@ -26,7 +26,7 @@
             desktopManager.gnome.enable = true;
         };
 
-        # Gnome games
+        # Gnome services
         gnome = {
             games.enable = false;
             rygel.enable = false;
