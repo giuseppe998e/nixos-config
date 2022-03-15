@@ -6,14 +6,7 @@
             device = "/nix/persist/etc/nixos";
             fsType = "none";
             options = [ "bind" ];
-        };
-
-        # Bind "/etc/NetworkManager/system-connections" directory
-        # mkdir -p etc/NetworkManager/system-connections
-        "/etc/NetworkManager/system-connections" = {
-            device = "/nix/persist/etc/NetworkManager/system-connections";
-            fsType = "none";
-            options = [ "bind" ];
+            depends = [ "/nix/persist" ];
         };
 
         # Bind "/var/log" directory
@@ -22,6 +15,7 @@
             device = "/nix/persist/var/log";
             fsType = "none";
             options = [ "bind" ];
+            depends = [ "/nix/persist" ];
         };
 
         # Bind "/var/lib" directory
@@ -30,6 +24,7 @@
             device = "/nix/persist/var/lib";
             fsType = "none";
             options = [ "bind" ];
+            depends = [ "/nix/persist" ];
         };
 
         # Bind "/var/cache" directory
@@ -42,7 +37,16 @@
     };
 
     environment.etc = {
-        # "machine-id" is used by systemd for the journal
-        "machine-id".source = "/nix/persist/etc/machine-id";
+        # Used by systemd for the journal
+        "machine-id".source =
+            "/nix/persist/etc/machine-id";
+
+        # Correct the time to synchronize the system clock
+        "adjtime".source =
+            "/nix/persist/etc/adjtime";
+
+        # Maintains network connection information
+        "NetworkManager/system-connections".source =
+            "/nix/persist/etc/NetworkManager/system-connections";
     };
 }
