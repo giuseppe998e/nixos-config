@@ -73,6 +73,7 @@ in
     environment.systemPackages = with pkgs; [
         alacritty
         firefox #Cause "firefox-devedition-bin(-unwrapped)" not works
+        gnome.gnome-boxes
         gnome.gnome-tweaks
         mpv
     ];
@@ -82,6 +83,9 @@ in
         font-awesome
         noto-fonts-emoji
     ];
+
+    # Set Alacritty as default terminal
+    environment.sessionVariables.TERMINAL = [ "alacritty" ];
 
     # Firefox configurations
     nixpkgs.config.firefox = {
