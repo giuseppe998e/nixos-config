@@ -5,8 +5,6 @@ with import <nixpkgs> {};
 with lib;
 
 let
-    # Download "home-manager" module
-    home-manager = fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
     # Returns all ".nix" files in a directory
     listConfig = dir: map (name: dir + "/${name}")
         (attrNames (filterAttrs
@@ -17,8 +15,7 @@ in
 {
     # Sub-Configurations
     imports = (listConfig ./configuration.d)
-            ++ (listConfig ./packages.d)
-            ++ [ (import "${home-manager}/nixos") ];
+            ++ (listConfig ./packages.d);
 
     # TimeZone
     time.timeZone = "Europe/Rome";

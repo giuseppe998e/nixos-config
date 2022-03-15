@@ -5,6 +5,7 @@
         git
         htop
         neovim
+        home-manager
     ];
 
     programs = {
