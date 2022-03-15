@@ -2,7 +2,8 @@
 
 {
     hardware = {
-        cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+        enableRedistributableFirmware = true;
+        cpu.intel.updateMicrocode = true;
         video.hidpi.enable = true;
         opengl = {
             enable = true;
