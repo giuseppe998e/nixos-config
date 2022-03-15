@@ -72,7 +72,7 @@ in
     # Install recommended packages
     environment.systemPackages = with pkgs; [
         alacritty
-        firefox #Cause "firefox-devedition-bin(-unwrapped)" not works
+        firefox #Cause "firefox-devedition-bin(-unwrapped)" not works with "chrome-gnome-shell"
         gnome.gnome-boxes
         gnome.gnome-tweaks
         mpv
