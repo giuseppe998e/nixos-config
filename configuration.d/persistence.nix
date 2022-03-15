@@ -37,6 +37,7 @@
         #};
     };
 
+    # Symlink etc files/dirs
     environment.etc = {
         # Used by systemd for the journal
         "machine-id".source =
@@ -50,4 +51,7 @@
         "NetworkManager/system-connections".source =
             "/nix/persist/etc/NetworkManager/system-connections";
     };
+
+    # Rollback results in sudo lectures after each reboot
+    security.sudo.extraConfig = "Defaults lecture = never";
 }
