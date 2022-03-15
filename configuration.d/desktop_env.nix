@@ -59,4 +59,9 @@
         pkgs.gnome.yelp
         pkgs.simple-scan
     ];
+
+    environment.systemPackages = with pkgs; [
+        alacritty
+        firefox-devedition-bin
+    ];
 }
