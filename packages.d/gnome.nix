@@ -46,13 +46,12 @@ in
         gedit
         gnome-boxes
         gnome-system-monitor
-        gnome-tweaks
         nautilus
 
         # Others
         pkgs.alacritty
         pkgs.firefox # Cause "firefox-devedition-bin(-unwrapped)" not works with "chrome-gnome-shell"
-        pkgs.mpv-unwrapped
+        pkgs.celluloid
     ];
 
     # Install recommended fonts
