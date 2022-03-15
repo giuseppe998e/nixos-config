@@ -1,5 +1,6 @@
 {
-    environment.sessionVariables = {
+    #environment.sessionVariables = {
+    environment.variables = {
         # LibVA && VDPau
         LIBVA_DRIVER_NAME = "iHD";
         VDPAU_DRIVER = "va_gl";
