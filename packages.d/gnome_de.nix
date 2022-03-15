@@ -24,50 +24,10 @@ in
         # Disable some GNOME services
         gnome = {
             chrome-gnome-shell.enable = true;
+            core-utilities.enable = false;
+            core-developer-tools.enable = false;
             games.enable = false;
-            gnome-initial-setup.enable = false;
-            gnome-remote-desktop.enable = false;
-            rygel.enable = false;
-            tracker-miners.enable = false;
-            tracker.enable = false;
-        };
     };
-
-    programs = {
-        gnome-documents.enable = false;
-        gnome-terminal.enable = false;
-    };
-
-    # Exclude some packages in Gnome
-    environment.gnome.excludePackages = with pkgs; [
-        epiphany
-        gnome-connections
-        gnome-online-accounts
-        gnome-passwordsafe
-        gnome-photos
-        gnome-tour
-        gnome.atomix
-        gnome.cheese
-        gnome.geary
-        gnome.gnome-calculator
-        gnome.gnome-calendar
-        gnome.gnome-characters
-        gnome.gnome-clocks
-        gnome.gnome-contacts
-        gnome.gnome-font-viewer
-        gnome.gnome-logs
-        gnome.gnome-maps
-        gnome.gnome-music
-        gnome.gnome-screenshot
-        gnome.gnome-weather
-        gnome.hitori
-        gnome.iagno
-        gnome.seahorse
-        gnome.tali
-        gnome.totem
-        gnome.yelp
-        simple-scan
-    ];
 
     # Install recommended packages
     environment.systemPackages = with pkgs; [
