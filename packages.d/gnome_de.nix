@@ -34,38 +34,47 @@
     };
 
     # Exclude some packages in Gnome
-    environment.gnome.excludePackages = [
-        pkgs.epiphany
-        pkgs.gnome-connections
-        pkgs.gnome-online-accounts
-        pkgs.gnome-passwordsafe
-        pkgs.gnome-photos
-        pkgs.gnome-tour
-        pkgs.gnome.atomix
-        pkgs.gnome.cheese
-        pkgs.gnome.geary
-        pkgs.gnome.gnome-calculator
-        pkgs.gnome.gnome-characters
-        pkgs.gnome.gnome-clocks
-        pkgs.gnome.gnome-contacts
-        pkgs.gnome.gnome-logs
-        pkgs.gnome.gnome-maps
-        pkgs.gnome.gnome-music
-        pkgs.gnome.gnome-screenshot
-        pkgs.gnome.gnome-weather
-        pkgs.gnome.hitori
-        pkgs.gnome.iagno
-        pkgs.gnome.seahorse
-        pkgs.gnome.tali
-        pkgs.gnome.totem
-        pkgs.gnome.yelp
-        pkgs.simple-scan
+    environment.gnome.excludePackages = with pkgs; [
+        epiphany
+        gnome-connections
+        gnome-online-accounts
+        gnome-passwordsafe
+        gnome-photos
+        gnome-tour
+        gnome.atomix
+        gnome.cheese
+        gnome.geary
+        gnome.gnome-calculator
+        gnome.gnome-calendar
+        gnome.gnome-characters
+        gnome.gnome-clocks
+        gnome.gnome-contacts
+        gnome.gnome-font-viewer
+        gnome.gnome-logs
+        gnome.gnome-maps
+        gnome.gnome-music
+        gnome.gnome-screenshot
+        gnome.gnome-weather
+        gnome.hitori
+        gnome.iagno
+        gnome.seahorse
+        gnome.tali
+        gnome.totem
+        gnome.yelp
+        simple-scan
     ];
 
     environment.systemPackages = with pkgs; [
         alacritty
         gnome.gnome-tweaks
-        firefox-devedition-bin
+        firefox #Cause "firefox-devedition-bin(-unwrapped)" not works
+    ];
+
+    fonts.fonts = with pkgs; [
+        noto-fonts-emoji
+        nerdfonts.override {
+            fonts = [ "Hack" ];
+        }
     ];
 
     nixpkgs.config.firefox.enableGnomeExtensions = true;
