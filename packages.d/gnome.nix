@@ -48,7 +48,7 @@ in
         # Others
         pkgs.alacritty
         pkgs.firefox # Cause "firefox-devedition-bin(-unwrapped)" not works with "chrome-gnome-shell"
-        pkgs.mpv
+        pkgs.mpv-unwrapped
     ];
 
     # Install recommended fonts
@@ -57,8 +57,11 @@ in
         noto-fonts-emoji
     ];
 
-    # Set Alacritty as default terminal
-    environment.sessionVariables.TERMINAL = [ "alacritty" ];
+    # Environment variables
+    environment.sessionVariables = {
+        TERMINAL = "alacritty";
+        EDITOR = "gedit";
+    };
 
     # Firefox configurations
     nixpkgs.config.firefox = {
