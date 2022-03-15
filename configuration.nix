@@ -26,23 +26,6 @@ in
     # Recommended for PipeWire (hardware.nix)
     security.rtkit.enable = true;
 
-    # Exclude some packages in Gnome
-    environment.gnome.excludePackages = [
-        pkgs.gnome.cheese
-        pkgs.gnome-photos
-        pkgs.gnome.gnome-music
-        pkgs.gnome.gnome-terminal
-        pkgs.gnome.gnome-characters
-        pkgs.gnome.totem
-        pkgs.gnome.tali
-        pkgs.gnome.iagno
-        pkgs.gnome.hitori
-        pkgs.gnome.atomix
-        pkgs.gnome-tour
-        pkgs.gnome.geary
-        pkgs.epiphany
-    ];
-
     # This value determines the NixOS release from which the default
     # settings for stateful data, like file locations and database versions
     # on your system were taken. It‘s perfectly fine and recommended to leave

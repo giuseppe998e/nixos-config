@@ -2,10 +2,10 @@
 
 {
     environment.systemPackages = with pkgs; [
-        firefox-devedition-bin
         alacritty
-        neovim
-        htop
+        firefox-devedition-bin
         git
+        htop
+        neovim
     ];
 }
