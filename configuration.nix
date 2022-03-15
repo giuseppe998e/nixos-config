@@ -18,7 +18,7 @@ in
     # Sub-Configurations
     imports = (listConfig ./configuration.d)
             ++ (listConfig ./packages.d)
-            ++ [ (import ${home-manager}/nixos) ];
+            ++ [ (import "${home-manager}/nixos") ];
 
     # TimeZone
     time.timeZone = "Europe/Rome";
