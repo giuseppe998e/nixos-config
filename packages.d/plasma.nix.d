@@ -27,24 +27,21 @@ in
         systemPackages = with pkgs; [
             # Plasma
             kde-gtk-config
-            oxygen_gtk
 
             # Others
             alacritty
             firefox
-            celluloid
+            mpv
         ];
-
-        shellInit = ''
-            export GTK_PATH=$GTK_PATH:${pkgs.oxygen_gtk}/lib/gtk-2.0
-            export GTK2_RC_FILES=$GTK2_RC_FILES:${pkgs.oxygen_gtk}/share/themes/oxygen-gtk/gtk-2.0/gtkrc
-        '';
 
         sessionVariables = {
             TERMINAL = "alacritty";
             #EDITOR = "";
         };
     };
+
+    # Enable networking
+    networking.networkmanager.enable = true;
 
     # Install recommended fonts
     fonts.fonts = with pkgs; [
