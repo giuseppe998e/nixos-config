@@ -26,6 +26,7 @@ in
     environment = {
         systemPackages = with pkgs; [
             # Plasma
+            kde-gtk-config
             oxygen_gtk
 
             # Others
@@ -41,7 +42,7 @@ in
 
         sessionVariables = {
             TERMINAL = "alacritty";
-            EDITOR = "gedit";
+            #EDITOR = "";
         };
     };
 
