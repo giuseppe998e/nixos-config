@@ -30,15 +30,15 @@ in
 
             # Others
             alacritty
-            firefox # Cause "firefox-devedition-bin(-unwrapped)" not works with "chrome-gnome-shell"
+            firefox
             celluloid
         ];
-        
+
         shellInit = ''
             export GTK_PATH=$GTK_PATH:${pkgs.oxygen_gtk}/lib/gtk-2.0
             export GTK2_RC_FILES=$GTK2_RC_FILES:${pkgs.oxygen_gtk}/share/themes/oxygen-gtk/gtk-2.0/gtkrc
         '';
-        
+
         sessionVariables = {
             TERMINAL = "alacritty";
             EDITOR = "gedit";
@@ -53,7 +53,6 @@ in
 
     # Firefox configurations
     nixpkgs.config.firefox = {
-        enableGnomeExtensions = true;
         pipewireSupport = true;
     };
 }
