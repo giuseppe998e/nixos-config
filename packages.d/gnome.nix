@@ -40,31 +40,33 @@ in
         file-roller.enable = true;
     };
 
-    environment.systemPackages = with pkgs.gnome; [
-        # Gnome's
-        eog
-        gedit
-        gnome-boxes
-        gnome-system-monitor
-        nautilus
+    # Other environment packages/variables
+    environment = {
+        systemPackages = with pkgs.gnome; [
+            # Gnome's
+            eog
+            gedit
+            gnome-boxes
+            gnome-system-monitor
+            nautilus
 
-        # Others
-        pkgs.alacritty
-        pkgs.firefox # Cause "firefox-devedition-bin(-unwrapped)" not works with "chrome-gnome-shell"
-        pkgs.celluloid
-    ];
+            # Others
+            pkgs.alacritty
+            pkgs.firefox # Cause "firefox-devedition-bin(-unwrapped)" not works with "chrome-gnome-shell"
+            pkgs.celluloid
+        ];
+        
+        sessionVariables = {
+            TERMINAL = "alacritty";
+            EDITOR = "gedit";
+        };
+    };
 
     # Install recommended fonts
     fonts.fonts = with pkgs; [
         font-awesome
         noto-fonts-emoji
     ];
-
-    # Environment variables
-    environment.sessionVariables = {
-        TERMINAL = "alacritty";
-        EDITOR = "gedit";
-    };
 
     # Firefox configurations
     nixpkgs.config.firefox = {
