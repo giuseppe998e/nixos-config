@@ -34,7 +34,7 @@ in
 
             # Others
             alacritty
-            firefox
+            firefox#-wayland
             mpv
         ];
 
@@ -54,7 +54,7 @@ in
     ];
 
     # Firefox configurations
-    nixpkgs.config.firefox = {
+    nixpkgs.config.firefox = { #-wayland = {
         pipewireSupport = true;
     };
 }
