@@ -19,7 +19,11 @@ in
             };
 
             # Plasma Desktop Environment
-            desktopManager.plasma5.enable = true;
+            desktopManager.plasma5 = {
+                enable = true;
+                useQtScaling = false; # HiDPI
+                runUsingSystemd = true;
+            };
         };
     };
 
